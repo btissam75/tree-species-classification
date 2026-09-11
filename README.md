@@ -2,9 +2,9 @@
 
 ## Interface de visualisation
 
-Cette maquette transforme les résultats expérimentaux en une interface d’exploration : sélection des espèces, visualisation de l’arbre analysé, prédiction DGCNN et comparaison directe des modèles.
+Cette interface d’exploration permet de parcourir les espèces, visualiser l’arbre analysé et suivre le pipeline de classification DGCNN à partir des nuages de points 3D.
 
-![Interface 3D Tree Species Classification](tree-species-dashboard.png)
+![Interface 3D Tree Species Classification](tree-species-interface.png)
 
 ## 🧩 1. Présentation du projet
 Ce projet a pour objectif de **mettre en œuvre et comparer plusieurs méthodes** de **classification d’espèces d’arbres** à partir de données de **nuages de points 3D**.  
