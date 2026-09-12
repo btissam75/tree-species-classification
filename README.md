@@ -19,19 +19,14 @@ L’objectif final est de déterminer **la méthode la plus performante** pour c
 Les données proviennent du dépôt suivant :  
 👉 [https://data.goettingen-research-online.de/dataset.xhtml?persistentId=doi:10.25625/FOHUJM](https://data.goettingen-research-online.de/dataset.xhtml?persistentId=doi:10.25625/FOHUJM)
 
-Chaque dossier correspond à une espèce d’arbre.  
-Le dataset contient au total **691 arbres**, répartis comme suit :
+Chaque dossier correspond à une espèce d’arbre. Après préparation et contrôle des données, le jeu expérimental utilisé contient **660 échantillons de nuages de points 3D**, répartis en **7 espèces**.
 
-| Espèce        | Nombre d'arbres |
-|----------------|-----------------|
-| Hêtre (Beech)        | 164 |
-| Chêne rouge (Red Oak) | 100 |
-| Frêne (Ash)           | 39  |
-| Chêne (Oak)           | 22  |
-| Sapin de Douglas      | 183 |
-| Épicéa (Spruce)       | 158 |
-| Pin (Pine)            | 25  |
-| **Total**             | **691** |
+| Partition | Nombre d'échantillons |
+|-----------|------------------------|
+| Entraînement | 427 |
+| Validation | 107 |
+| Test | 126 |
+| **Total** | **660** |
 
 ---
 
@@ -73,7 +68,7 @@ Ces modèles opèrent directement sur les points sans conversion en images :
 
 ## ⚙️ 4. Stratégie d’évaluation
 
-- **Splits :** train/test fixe (80%/20%) avec stratification.  
+- **Splits :** entraînement (427), validation (107) et test (126), avec stratification.  
 - **Validation croisée :** 5-fold sur l’ensemble d’entraînement pour la recherche d’hyperparamètres.  
 - **Métriques utilisées :**
   - Accuracy
@@ -119,9 +114,9 @@ Ces modèles opèrent directement sur les points sans conversion en images :
 | Méthode | Accuracy | Balanced Acc. | F1-score (weighted) |
 |----------|-----------|---------------|---------------------|
 | PointNet | 0.93 | 0.93 | 0.929 |
-| **DGCNN** | **0.994** | **0.994** | **0.994** |
+| **DGCNN** | **0.947** | **0.947** | **0.947** |
 
-🏆 *Le modèle DGCNN surpasse toutes les autres approches, atteignant presque 99,4 % de précision.*
+🏆 *Le modèle DGCNN surpasse les autres approches évaluées et atteint 94,7 % de précision sur le jeu expérimental.*
 
 ---
 
